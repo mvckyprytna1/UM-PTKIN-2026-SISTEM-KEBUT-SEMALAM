@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Materi Keislaman UM-PTKIN · Hafalan Kilat 2026</title>
+  <meta name="description" content="Paket hafalan darurat Literasi Ajaran Islam untuk UM-PTKIN 2026. Al-Qur'an, Hadits, Akidah, Fiqh, Sejarah Islam — ringkas, tegas, siap ujian." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── TOKENS ─────────────────────────────────────────────── */
+    :root {
+      --ink:        #0e1117;
+      --ink-soft:   #3a3f4b;
+      --ink-muted:  #6b7280;
+      --parchment:  #faf8f3;
+      --surface:    #ffffff;
+      --surface-2:  #f5f3ee;
+      --gold:       #b8892a;
+      --gold-light: #e8c96d;
+      --gold-pale:  #fdf5e0;
+      --emerald:    #1a6b50;
+      --emerald-soft:#e8f4ef;
+      --ruby:       #8b1f2f;
+      --ruby-soft:  #faeaec;
+      --sapphire:   #1e3a6e;
+      --sapphire-soft: #e8edf8;
+      --border:     #e2ddd4;
+      --border-gold:#d4b96e;
+      --r:          14px;
+      --r-sm:       8px;
+      --shadow-sm:  0 1px 4px rgba(0,0,0,.06);
+      --shadow-md:  0 4px 20px rgba(0,0,0,.08);
+      --shadow-lg:  0 12px 40px rgba(0,0,0,.12);
+    }
+
+    /* ─── RESET ──────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--parchment);
+      color: var(--ink);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    /* ─── SCROLLBAR ──────────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--surface-2); }
+    ::-webkit-scrollbar-thumb { background: var(--gold-light); border-radius: 99px; }
+
+    /* ─── PROGRESS BAR ───────────────────────────────────────── */
+    #progress-bar {
+      position: fixed; top: 0; left: 0; height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      width: 0%; z-index: 9999; transition: width .1s linear;
+    }
+
+    /* ─── NAVBAR ─────────────────────────────────────────────── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250,248,243,.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 clamp(16px, 5vw, 48px);
+    }
+    .nav-inner {
+      max-width: 960px; margin: 0 auto;
+      display: flex; align-items: center;
+      justify-content: space-between;
+      height: 58px; gap: 16px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 15px; color: var(--ink);
+      white-space: nowrap;
+    }
+    .nav-brand-icon {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Amiri', serif; color: var(--surface); font-size: 16px;
+    }
+    .nav-tabs {
+      display: flex; gap: 4px; overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .nav-tabs::-webkit-scrollbar { display: none; }
+    .nav-tab {
+      padding: 6px 12px; border-radius: 6px;
+      font-size: 13px; font-weight: 500; color: var(--ink-muted);
+      cursor: pointer; white-space: nowrap;
+      transition: background .2s, color .2s;
+      border: none; background: transparent;
+    }
+    .nav-tab:hover, .nav-tab.active {
+      background: var(--gold-pale); color: var(--gold);
+    }
+
+    /* ─── HERO ───────────────────────────────────────────────── */
+    .hero {
+      padding: clamp(48px, 10vw, 96px) clamp(16px, 5vw, 48px) clamp(32px, 6vw, 56px);
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(184,137,42,.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 20% 100%, rgba(26,107,80,.07) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold-pale); border: 1px solid var(--border-gold);
+      color: var(--gold); padding: 6px 14px; border-radius: 99px;
+      font-size: 12px; font-weight: 600; letter-spacing: .05em;
+      text-transform: uppercase; margin-bottom: 24px;
+    }
+    .hero-eyebrow span { font-size: 14px; }
+    .hero-title {
+      font-family: 'Amiri', serif;
+      font-size: clamp(2rem, 6vw, 3.6rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--ink);
+      max-width: 720px; margin: 0 auto 16px;
+    }
+    .hero-title em {
+      font-style: normal;
+      color: var(--gold);
+    }
+    .hero-sub {
+      font-size: clamp(14px, 2.5vw, 17px);
+      color: var(--ink-soft);
+      max-width: 560px; margin: 0 auto 36px;
+      font-weight: 400;
+    }
+    .hero-stats {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+      margin-bottom: 40px;
+    }
+    .hero-stat {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 14px 20px; text-align: left;
+      box-shadow: var(--shadow-sm);
+      min-width: 120px;
+    }
+    .hero-stat-num {
+      font-size: 24px; font-weight: 700; color: var(--gold);
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .hero-stat-label {
+      font-size: 11px; color: var(--ink-muted); font-weight: 500;
+      text-transform: uppercase; letter-spacing: .04em; margin-top: 2px;
+    }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, var(--gold) 0%, #c99730 100%);
+      color: #fff; padding: 14px 28px; border-radius: 10px;
+      font-weight: 600; font-size: 15px;
+      box-shadow: 0 4px 14px rgba(184,137,42,.35);
+      transition: transform .2s, box-shadow .2s;
+      cursor: pointer; border: none;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(184,137,42,.45);
+    }
+
+    /* ─── LAYOUT WRAPPER ─────────────────────────────────────── */
+    .wrapper {
+      max-width: 960px; margin: 0 auto;
+      padding: 0 clamp(16px, 5vw, 48px);
+    }
+
+    /* ─── SECTION HEADER ─────────────────────────────────────── */
+    .section-header {
+      display: flex; align-items: flex-start;
+      gap: 16px; margin-bottom: 28px;
+    }
+    .section-icon {
+      width: 44px; height: 44px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; flex-shrink: 0; margin-top: 4px;
+    }
+    .section-icon.gold { background: var(--gold-pale); }
+    .section-icon.emerald { background: var(--emerald-soft); }
+    .section-icon.ruby { background: var(--ruby-soft); }
+    .section-icon.sapphire { background: var(--sapphire-soft); }
+    .section-title {
+      font-family: 'Amiri', serif;
+      font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+      font-weight: 700; color: var(--ink); line-height: 1.25;
+    }
+    .section-desc {
+      font-size: 14px; color: var(--ink-muted); margin-top: 4px; font-weight: 400;
+    }
+
+    /* ─── CARD ───────────────────────────────────────────────── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow .2s, transform .2s;
+    }
+    .card:hover { box-shadow: var(--shadow-md); }
+
+    /* ─── SECTION SPACING ────────────────────────────────────── */
+    .section {
+      padding: clamp(40px, 7vw, 72px) 0;
+    }
+    .section + .section {
+      border-top: 1px solid var(--border);
+    }
+
+    /* ─── CHEAT SHEET ────────────────────────────────────────── */
+    .cheatsheet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 12px;
+    }
+    .cheat-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--gold-light);
+      border-radius: var(--r-sm);
+      padding: 14px 16px;
+      display: flex; align-items: flex-start; gap: 12px;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .cheat-item:hover {
+      border-left-color: var(--gold);
+      box-shadow: var(--shadow-sm);
+    }
+    .cheat-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; font-weight: 500; color: var(--gold);
+      background: var(--gold-pale);
+      padding: 2px 7px; border-radius: 4px;
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .cheat-text {
+      font-size: 14px; color: var(--ink-soft); line-height: 1.5;
+    }
+    .cheat-text strong { color: var(--ink); font-weight: 600; }
+
+    /* ─── ACCORDION ──────────────────────────────────────────── */
+    .accordion { display: flex; flex-direction: column; gap: 10px; }
+    .acc-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-sm);
+      overflow: hidden;
+      transition: box-shadow .2s;
+    }
+    .acc-item.open { box-shadow: var(--shadow-md); }
+    .acc-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 20px; cursor: pointer; gap: 12px;
+      user-select: none;
+    }
+    .acc-header:hover { background: var(--surface-2); }
+    .acc-title {
+      font-weight: 600; font-size: 15px; color: var(--ink);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .acc-badge {
+      font-size: 11px; font-weight: 600; padding: 3px 9px;
+      border-radius: 99px; letter-spacing: .03em;
+    }
+    .acc-badge.gold { background: var(--gold-pale); color: var(--gold); }
+    .acc-badge.emerald { background: var(--emerald-soft); color: var(--emerald); }
+    .acc-badge.ruby { background: var(--ruby-soft); color: var(--ruby); }
+    .acc-badge.sapphire { background: var(--sapphire-soft); color: var(--sapphire); }
+    .acc-arrow {
+      color: var(--ink-muted); font-size: 18px;
+      transition: transform .3s; flex-shrink: 0;
+    }
+    .acc-item.open .acc-arrow { transform: rotate(180deg); }
+    .acc-body {
+      max-height: 0; overflow: hidden;
+      transition: max-height .4s cubic-bezier(.4,0,.2,1);
+    }
+    .acc-body-inner {
+      padding: 0 20px 20px;
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+    }
+
+    /* ─── TABLE ──────────────────────────────────────────────── */
+    .tbl-wrap { overflow-x: auto; border-radius: var(--r-sm); border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; }
+    thead { background: var(--surface-2); }
+    th {
+      padding: 11px 14px; font-size: 12px; font-weight: 600;
+      color: var(--ink-muted); text-transform: uppercase; letter-spacing: .04em;
+      text-align: left; border-bottom: 1px solid var(--border);
+    }
+    td {
+      padding: 12px 14px; font-size: 14px; color: var(--ink-soft);
+      border-bottom: 1px solid var(--border);
+    }
+    tr:last-child td { border-bottom: none; }
+    tbody tr:hover td { background: var(--gold-pale); color: var(--ink); }
+    td strong { color: var(--ink); font-weight: 600; }
+
+    /* ─── PILL LIST ──────────────────────────────────────────── */
+    .pill-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .pill {
+      padding: 6px 14px; border-radius: 99px;
+      font-size: 13px; font-weight: 500; border: 1px solid;
+    }
+    .pill.gold { background: var(--gold-pale); color: var(--gold); border-color: var(--border-gold); }
+    .pill.emerald { background: var(--emerald-soft); color: var(--emerald); border-color: #b0d4c8; }
+    .pill.ruby { background: var(--ruby-soft); color: var(--ruby); border-color: #e0b0b8; }
+    .pill.sapphire { background: var(--sapphire-soft); color: var(--sapphire); border-color: #b0c0dc; }
+
+    /* ─── POIN HAFALAN LIST ──────────────────────────────────── */
+    .poin-list { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+    .poin-item {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 12px 14px; background: var(--surface-2);
+      border-radius: var(--r-sm); border: 1px solid var(--border);
+      font-size: 14px; color: var(--ink-soft);
+    }
+    .poin-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); flex-shrink: 0; margin-top: 8px;
+    }
+
+    /* ─── QUIZ ───────────────────────────────────────────────── */
+    .quiz-wrap { display: flex; flex-direction: column; gap: 20px; }
+    .quiz-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r); padding: 20px;
+    }
+    .quiz-q {
+      font-weight: 600; font-size: 15px; color: var(--ink);
+      margin-bottom: 14px; line-height: 1.5;
+    }
+    .quiz-q::before {
+      content: attr(data-n) '. ';
+      color: var(--gold); font-family: 'JetBrains Mono', monospace;
+    }
+    .quiz-options { display: flex; flex-direction: column; gap: 8px; }
+    .quiz-opt {
+      display: flex; align-items: center; gap: 10px;
+      padding: 10px 14px; border-radius: var(--r-sm);
+      border: 1.5px solid var(--border); cursor: pointer;
+      font-size: 14px; color: var(--ink-soft);
+      transition: background .15s, border-color .15s, color .15s;
+      user-select: none;
+    }
+    .quiz-opt:hover:not(.selected):not(.disabled) {
+      background: var(--gold-pale); border-color: var(--border-gold);
+      color: var(--ink);
+    }
+    .quiz-opt.correct {
+      background: var(--emerald-soft); border-color: #6dbfa0; color: var(--emerald);
+      font-weight: 600;
+    }
+    .quiz-opt.wrong {
+      background: var(--ruby-soft); border-color: #d0808e; color: var(--ruby);
+    }
+    .quiz-opt.disabled { pointer-events: none; }
+    .quiz-label {
+      width: 22px; height: 22px; border-radius: 6px;
+      background: var(--surface-2); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'JetBrains Mono', monospace; font-size: 11px;
+      font-weight: 600; flex-shrink: 0;
+      color: var(--ink-muted);
+    }
+    .quiz-opt.correct .quiz-label { background: var(--emerald); color: #fff; border-color: var(--emerald); }
+    .quiz-opt.wrong .quiz-label { background: var(--ruby); color: #fff; border-color: var(--ruby); }
+    .quiz-explanation {
+      margin-top: 12px; padding: 12px 14px;
+      background: var(--surface-2); border-radius: var(--r-sm);
+      border-left: 3px solid var(--gold);
+      font-size: 13px; color: var(--ink-soft);
+      display: none;
+    }
+    .quiz-explanation.show { display: block; }
+    .quiz-explanation strong { color: var(--ink); }
+
+    /* ─── SCORE TRACKER ──────────────────────────────────────── */
+    .score-bar {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 16px 20px;
+      display: flex; align-items: center; gap: 16px;
+      margin-bottom: 20px; flex-wrap: wrap;
+    }
+    .score-label { font-size: 13px; color: var(--ink-muted); font-weight: 500; }
+    .score-count {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 18px; font-weight: 700; color: var(--gold);
+    }
+    .score-progress {
+      flex: 1; min-width: 120px; height: 6px;
+      background: var(--surface-2); border-radius: 99px; overflow: hidden;
+    }
+    .score-fill {
+      height: 100%; background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      border-radius: 99px; transition: width .4s ease;
+    }
+
+    /* ─── MNEMONIK ───────────────────────────────────────────── */
+    .mnemo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+    .mnemo-card {
+      background: linear-gradient(135deg, var(--gold-pale), var(--surface));
+      border: 1px solid var(--border-gold);
+      border-radius: var(--r-sm); padding: 16px;
+    }
+    .mnemo-key {
+      font-family: 'Amiri', serif; font-size: 18px; color: var(--gold);
+      font-weight: 700; letter-spacing: .03em;
+    }
+    .mnemo-val { font-size: 13px; color: var(--ink-soft); margin-top: 6px; }
+
+    /* ─── TIMELINE ───────────────────────────────────────────── */
+    .timeline { position: relative; padding-left: 28px; }
+    .timeline::before {
+      content: ''; position: absolute; left: 8px; top: 8px; bottom: 8px;
+      width: 2px; background: linear-gradient(to bottom, var(--gold), var(--gold-light), transparent);
+      border-radius: 99px;
+    }
+    .tl-item { position: relative; margin-bottom: 24px; }
+    .tl-item:last-child { margin-bottom: 0; }
+    .tl-dot {
+      position: absolute; left: -24px; top: 4px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--gold); border: 2px solid var(--parchment);
+      box-shadow: 0 0 0 2px var(--gold-light);
+    }
+    .tl-year {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px; font-weight: 600; color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .tl-event { font-size: 14px; font-weight: 600; color: var(--ink); }
+    .tl-note { font-size: 13px; color: var(--ink-muted); margin-top: 2px; }
+
+    /* ─── JEBAKAN ────────────────────────────────────────────── */
+    .trap-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+    .trap-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-left: 4px solid var(--ruby); border-radius: var(--r-sm);
+      padding: 16px;
+    }
+    .trap-title { font-weight: 700; font-size: 14px; color: var(--ruby); margin-bottom: 6px; }
+    .trap-wrong {
+      font-size: 13px; color: var(--ink-muted); margin-bottom: 4px;
+      text-decoration: line-through; opacity: .6;
+    }
+    .trap-right { font-size: 13px; color: var(--emerald); font-weight: 600; }
+
+    /* ─── JADWAL ─────────────────────────────────────────────── */
+    .jadwal-list { display: flex; flex-direction: column; gap: 8px; }
+    .jadwal-item {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 14px 16px; background: var(--surface);
+      border: 1px solid var(--border); border-radius: var(--r-sm);
+    }
+    .jadwal-time {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px; font-weight: 600; color: var(--gold);
+      background: var(--gold-pale); padding: 4px 8px; border-radius: 6px;
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .jadwal-focus { font-weight: 600; font-size: 14px; color: var(--ink); }
+    .jadwal-target { font-size: 13px; color: var(--ink-muted); margin-top: 2px; }
+
+    /* ─── FOOTER ─────────────────────────────────────────────── */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,.7);
+      padding: clamp(40px, 7vw, 64px) clamp(16px, 5vw, 48px) 32px;
+      margin-top: clamp(40px, 7vw, 72px);
+    }
+    .footer-inner {
+      max-width: 960px; margin: 0 auto;
+    }
+    .footer-top {
+      display: flex; flex-wrap: wrap; gap: 40px;
+      padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,.1);
+      margin-bottom: 28px;
+    }
+    .footer-brand { flex: 1; min-width: 220px; }
+    .footer-logo {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 14px;
+    }
+    .footer-logo-icon {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Amiri', serif; color: var(--ink); font-size: 18px;
+    }
+    .footer-logo-text { font-weight: 700; font-size: 15px; color: #fff; }
+    .footer-desc { font-size: 13px; line-height: 1.7; max-width: 280px; }
+    .footer-creator { flex: 1; min-width: 200px; }
+    .footer-creator-title {
+      font-size: 11px; font-weight: 600; letter-spacing: .06em;
+      text-transform: uppercase; color: var(--gold-light); margin-bottom: 16px;
+    }
+    .creator-card {
+      display: flex; align-items: center; gap: 14px; margin-bottom: 18px;
+    }
+    .creator-avatar {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--gold) 0%, #c99730 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Amiri', serif; font-size: 22px; color: #fff;
+      font-weight: 700; flex-shrink: 0;
+    }
+    .creator-name { font-size: 16px; font-weight: 700; color: #fff; }
+    .creator-handle { font-size: 13px; color: rgba(255,255,255,.5); margin-top: 2px; }
+    .footer-links { display: flex; flex-direction: column; gap: 8px; }
+    .footer-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; color: rgba(255,255,255,.6);
+      padding: 8px 12px; border-radius: 8px;
+      background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08);
+      transition: background .2s, color .2s;
+    }
+    .footer-link:hover {
+      background: rgba(184,137,42,.2); color: var(--gold-light);
+      border-color: rgba(184,137,42,.3);
+    }
+    .footer-link-icon { font-size: 16px; }
+    .footer-bottom {
+      display: flex; flex-wrap: wrap; align-items: center;
+      justify-content: space-between; gap: 12px;
+      font-size: 12px;
+    }
+    .footer-copy { color: rgba(255,255,255,.35); }
+    .footer-tag {
+      color: rgba(255,255,255,.35);
+      font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    }
+
+    /* ─── BACK TO TOP ────────────────────────────────────────── */
+    #back-top {
+      position: fixed; bottom: 24px; right: 20px;
+      width: 40px; height: 40px; border-radius: 10px;
+      background: var(--gold); color: #fff; font-size: 18px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 12px rgba(184,137,42,.4);
+      cursor: pointer; border: none;
+      transform: translateY(80px); opacity: 0;
+      transition: transform .3s, opacity .3s;
+      z-index: 200;
+    }
+    #back-top.show { transform: translateY(0); opacity: 1; }
+    #back-top:hover { background: #c99730; }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .cheatsheet-grid { grid-template-columns: 1fr; }
+      .mnemo-grid { grid-template-columns: 1fr 1fr; }
+      .trap-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 8px; }
+      .hero-stat { min-width: 100px; padding: 10px 14px; }
+    }
+
+    /* ─── ANIM ───────────────────────────────────────────────── */
+    @media (prefers-reduced-motion: no-preference) {
+      .fade-up {
+        opacity: 0; transform: translateY(24px);
+        transition: opacity .5s ease, transform .5s ease;
+      }
+      .fade-up.visible { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<!-- ═══ NAVBAR ═══════════════════════════════════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <div class="nav-brand-icon">ق</div>
+      <span>UM-PTKIN 2026</span>
+    </div>
+    <div class="nav-tabs">
+      <button class="nav-tab active" onclick="scrollTo('#hero')">Beranda</button>
+      <button class="nav-tab" onclick="scrollTo('#quran')">Qur'an & Hadits</button>
+      <button class="nav-tab" onclick="scrollTo('#akidah')">Akidah</button>
+      <button class="nav-tab" onclick="scrollTo('#fiqh')">Fiqh</button>
+      <button class="nav-tab" onclick="scrollTo('#ski')">SKI</button>
+      <button class="nav-tab" onclick="scrollTo('#quiz')">Latihan</button>
+      <button class="nav-tab" onclick="scrollTo('#jadwal')">Jadwal</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ══════════════════════════════════════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-eyebrow"><span>📖</span> Hafalan Darurat · UM-PTKIN 2026</div>
+  <h1 class="hero-title">Materi Keislaman<br /><em>Hafalan Kilat</em></h1>
+  <p class="hero-sub">Paket belajar kompak untuk Literasi Ajaran Islam. Fokus pada poin berpeluang tinggi, jebakan soal, dan strategi eliminasi cepat.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-num">4</div>
+      <div class="hero-stat-label">Bidang Materi</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">20</div>
+      <div class="hero-stat-label">Fakta Kunci</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">20+</div>
+      <div class="hero-stat-label">Soal Latihan</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">2h</div>
+      <div class="hero-stat-label">Jadwal Belajar</div>
+    </div>
+  </div>
+  <button class="btn-primary" onclick="scrollTo('#cheatsheet')">
+    📋 Lihat Cheat Sheet
+  </button>
+</section>
+
+<!-- ═══ CHEAT SHEET ═══════════════════════════════════════════ -->
+<section class="section" id="cheatsheet">
+  <div class="wrapper">
+    <div class="section-header fade-up">
+      <div class="section-icon gold">📋</div>
+      <div>
+        <h2 class="section-title">20 Fakta Kunci — Hafal Ini Dulu</h2>
+        <p class="section-desc">Kalau waktu mepet banget, hafalkan 20 item ini. Paling padat nilainya.</p>
+      </div>
+    </div>
+    <div class="cheatsheet-grid">
+      <!-- Qur'an & Hadits -->
+      <div class="cheat-item fade-up"><span class="cheat-num">01</span><span class="cheat-text"><strong>Sanad</strong> = rantai periwayatan hadits</span></div>
+      <div class="cheat-item fade-up"><span class="cheat-num">02</span><span class="cheat-text"><strong>Matan</strong> = isi teks hadits</span></div>
+      <div class="cheat-item fade-up"><span class="cheat-num">03</span><span class="cheat-text"><strong>Makki</strong> = tauhid dan akhirat</span></div>
+      <div class="cheat-item fade-up"><span class="cheat-num">04</span><span class="cheat-text"><strong>Madani</strong> = hukum dan masyarakat</span></div>
+      <div class="cheat-item fade-up"><span class="cheat-num">05</span><span class="cheat-text"><strong>Al-Ikhlas</strong> = tauhid murni (pengesaan Allah)</span></div>
+      <div class="cheat-item fade-up"><span class="cheat-num">06</span><span class="cheat-text"><strong>Al-Hujurat 49:10-13</strong> = ukhuwah dan adab sosial</span></div>
+      <div class="cheat-item fade-up"><span class="cheat-num">07</span><span class="cheat-text"><strong>Al-Ma'un</strong> = kritik ibadah tanpa empati sosial</span></div>
+      <div class="cheat-item fade-up"><span class="cheat-num">08</span><span class="cheat-text"><strong>Al-'Asr</strong> = iman, amal, kebenaran, sabar</span></div>
+      <!-- Akidah -->
+      <div class="cheat-item fade-up"><span class="cheat-num">09</span><span class="cheat-text"><strong>Hadits Jibril</strong> = Islam, Iman, Ihsan + tanda kiamat</span></div>
+      <div class="cheat-item fade-up"><span class="cheat-num">10</span><span class="cheat-text"><strong>Rububiyah</strong> = Allah menciptakan dan mengatur alam</span></div>
+      <div class="cheat-item fade-up"><span class="cheat-num">11</span><span class="cheat-text"><strong>Uluhiyah</strong> = hanya Allah yang berhak disembah</span></div>
+      <div class="cheat-item fade-up"><span class="cheat-num">12</span><span class="cheat-text"><strong>Ihsan</strong> = beribadah seakan melihat Allah; sadar Allah melihat kita</span></div>
+      <!-- Fiqh -->
+      <div class="cheat-item fade-up"><span class="cheat-num">13</span><span class="cheat-text"><strong>Syarat shalat</strong> = kondisi sebelum / di luar shalat</span></div>
+      <div class="cheat-item fade-up"><span class="cheat-num">14</span><span class="cheat-text"><strong>Rukun shalat</strong> = bagian inti di dalam pelaksanaan shalat</span></div>
+      <div class="cheat-item fade-up"><span class="cheat-num">15</span><span class="cheat-text"><strong>Zakat</strong> = wajib dengan syarat tertentu; <strong>Sedekah</strong> = lebih luas</span></div>
+      <div class="cheat-item fade-up"><span class="cheat-num">16</span><span class="cheat-text"><strong>Wakaf</strong> = pokok harta ditahan, manfaatnya dialirkan</span></div>
+      <!-- SKI -->
+      <div class="cheat-item fade-up"><span class="cheat-num">17</span><span class="cheat-text"><strong>Hijrah (622 M)</strong> = titik awal kalender hijriah</span></div>
+      <div class="cheat-item fade-up"><span class="cheat-num">18</span><span class="cheat-text"><strong>Perang Badar (624 M)</strong> = perang besar pertama umat Islam</span></div>
+      <div class="cheat-item fade-up"><span class="cheat-num">19</span><span class="cheat-text"><strong>Khalifah Utsman</strong> = standarisasi mushaf Al-Qur'an</span></div>
+      <div class="cheat-item fade-up"><span class="cheat-num">20</span><span class="cheat-text"><strong>Wali Songo</strong> = tokoh dakwah Islam kultural di Jawa</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ QUR'AN & HADITS ═══════════════════════════════════════ -->
+<section class="section" id="quran">
+  <div class="wrapper">
+    <div class="section-header fade-up">
+      <div class="section-icon gold">📗</div>
+      <div>
+        <h2 class="section-title">Al-Qur'an dan Hadits</h2>
+        <p class="section-desc">Sanad, matan, Makki-Madani, tema surah, klasifikasi hadits</p>
+      </div>
+    </div>
+
+    <div class="accordion fade-up">
+      <!-- Pembeda Istilah -->
+      <div class="acc-item" id="acc-quran-1">
+        <div class="acc-header" onclick="toggleAcc('acc-quran-1')">
+          <div class="acc-title">
+            <span class="acc-badge gold">Tabel</span>
+            Pembeda Istilah Ulumul Hadits
+          </div>
+          <span class="acc-arrow">⌄</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr><th>Istilah</th><th>Arti Ringkas</th><th>Kata Kunci Ujian</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Sanad</strong></td><td>Rantai periwayatan</td><td>"siapa meriwayatkan dari siapa"</td></tr>
+                  <tr><td><strong>Matan</strong></td><td>Isi teks hadits</td><td>"bunyi atau isi hadits"</td></tr>
+                  <tr><td><strong>Mutawatir</strong></td><td>Banyak jalur independen</td><td>kuantitas transmisi</td></tr>
+                  <tr><td><strong>Ahad</strong></td><td>Tidak mencapai mutawatir</td><td>jalur lebih terbatas</td></tr>
+                  <tr><td><strong>Sahih</strong></td><td>Otentik / kuat</td><td>sanad bersambung + perawi kuat</td></tr>
+                  <tr><td><strong>Hasan</strong></td><td>Baik / cukup kuat</td><td>di bawah sahih</td></tr>
+                  <tr><td><strong>Daif</strong></td><td>Lemah</td><td>ada cacat sanad / perawi</td></tr>
+                  <tr><td><strong>Mawdu'</strong></td><td>Palsu</td><td>hasil fabrikasi</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tema Surah -->
+      <div class="acc-item" id="acc-quran-2">
+        <div class="acc-header" onclick="toggleAcc('acc-quran-2')">
+          <div class="acc-title">
+            <span class="acc-badge gold">Hafalan</span>
+            Tema Surah Prioritas Tinggi
+          </div>
+          <span class="acc-arrow">⌄</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="poin-list">
+              <div class="poin-item"><div class="poin-dot"></div><div><strong>Al-Fatihah:</strong> inti doa, pujian, penghambaan, permohonan hidayah</div></div>
+              <div class="poin-item"><div class="poin-dot"></div><div><strong>Al-Ikhlas (112):</strong> pengesaan Allah — "Allah Ahad, tidak beranak, tidak diperanakkan"</div></div>
+              <div class="poin-item"><div class="poin-dot"></div><div><strong>Al-Hujurat (49:10–13):</strong> ukhuwah, larangan merendahkan, ukuran kemuliaan = takwa</div></div>
+              <div class="poin-item"><div class="poin-dot"></div><div><strong>Al-Ma'un (107):</strong> kritik terhadap ibadah yang kosong dari kepedulian sosial</div></div>
+              <div class="poin-item"><div class="poin-dot"></div><div><strong>Al-'Asr (103):</strong> empat unsur keselamatan: iman, amal saleh, nasihat kebenaran, nasihat kesabaran</div></div>
+              <div class="poin-item"><div class="poin-dot"></div><div><strong>Al-Isra 17:23:</strong> tauhid diikuti langsung birrul walidain</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Makki vs Madani -->
+      <div class="acc-item" id="acc-quran-3">
+        <div class="acc-header" onclick="toggleAcc('acc-quran-3')">
+          <div class="acc-title">
+            <span class="acc-badge gold">Pembeda</span>
+            Makki vs Madani
+          </div>
+          <span class="acc-arrow">⌄</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr><th>Kategori</th><th>Ciri Utama</th><th>Mnemonik</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Makki</strong></td><td>Tauhid, akhirat, fondasi iman, akhlak dasar</td><td>Makki = <em>Mendasar</em></td></tr>
+                  <tr><td><strong>Madani</strong></td><td>Hukum, muamalah, masyarakat, pembentukan komunitas</td><td>Madani = <em>Masyarakat</em></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kutub al-Sittah -->
+      <div class="acc-item" id="acc-quran-4">
+        <div class="acc-header" onclick="toggleAcc('acc-quran-4')">
+          <div class="acc-title">
+            <span class="acc-badge gold">Hafalan</span>
+            Kutub al-Sittah (Enam Kitab Hadits Utama)
+          </div>
+          <span class="acc-arrow">⌄</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="pill-list">
+              <span class="pill gold">Sahih Bukhari</span>
+              <span class="pill gold">Sahih Muslim</span>
+              <span class="pill gold">Sunan Abu Dawud</span>
+              <span class="pill gold">Sunan al-Tirmidzi</span>
+              <span class="pill gold">Sunan al-Nasa'i</span>
+              <span class="pill gold">Sunan Ibn Majah</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ AKIDAH & AKHLAK ═══════════════════════════════════════ -->
+<section class="section" id="akidah">
+  <div class="wrapper">
+    <div class="section-header fade-up">
+      <div class="section-icon emerald">🕌</div>
+      <div>
+        <h2 class="section-title">Akidah dan Akhlak</h2>
+        <p class="section-desc">Tauhid, rukun iman, ihsan, akhlak mahmudah vs mazmumah</p>
+      </div>
+    </div>
+
+    <div class="accordion fade-up">
+      <!-- Jenis Tauhid -->
+      <div class="acc-item" id="acc-akidah-1">
+        <div class="acc-header" onclick="toggleAcc('acc-akidah-1')">
+          <div class="acc-title">
+            <span class="acc-badge emerald">Inti</span>
+            Tiga Jenis Tauhid
+          </div>
+          <span class="acc-arrow">⌄</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="poin-list">
+              <div class="poin-item"><div class="poin-dot"></div><div><strong>Rububiyah:</strong> mengesakan Allah dalam penciptaan, pemeliharaan, dan pengaturan alam</div></div>
+              <div class="poin-item"><div class="poin-dot"></div><div><strong>Uluhiyah:</strong> mengesakan Allah dalam ibadah — hanya Allah yang berhak disembah</div></div>
+              <div class="poin-item"><div class="poin-dot"></div><div><strong>Asma wa Sifat:</strong> menetapkan nama dan sifat Allah yang benar tanpa menyerupakan dengan makhluk</div></div>
+            </div>
+            <div style="margin-top:14px; padding:12px 14px; background:var(--gold-pale); border-radius:8px; border:1px solid var(--border-gold);">
+              <span style="font-size:13px; font-weight:600; color:var(--gold);">Mnemonik:</span>
+              <span style="font-size:13px; color:var(--ink-soft); margin-left:6px;">Ru–Ul–As = Rububiyah – Uluhiyah – Asma wa Sifat</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rukun Iman & Islam -->
+      <div class="acc-item" id="acc-akidah-2">
+        <div class="acc-header" onclick="toggleAcc('acc-akidah-2')">
+          <div class="acc-title">
+            <span class="acc-badge emerald">Tabel</span>
+            Rukun Islam vs Rukun Iman
+          </div>
+          <span class="acc-arrow">⌄</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr><th>Rukun Islam</th><th>Fokus</th><th>Rukun Iman</th><th>Fokus</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Syahadat</strong></td><td>Pengakuan</td><td><strong>Iman kepada Allah</strong></td><td>Pokok tauhid</td></tr>
+                  <tr><td><strong>Shalat</strong></td><td>Ibadah harian</td><td><strong>Iman kepada Malaikat</strong></td><td>Makhluk gaib taat</td></tr>
+                  <tr><td><strong>Zakat</strong></td><td>Kepedulian sosial</td><td><strong>Iman kepada Kitab</strong></td><td>Wahyu Allah</td></tr>
+                  <tr><td><strong>Puasa</strong></td><td>Pengendalian diri</td><td><strong>Iman kepada Rasul</strong></td><td>Pembawa risalah</td></tr>
+                  <tr><td><strong>Haji</strong></td><td>Ibadah puncak (mampu)</td><td><strong>Iman kepada Hari Akhir</strong></td><td>Hisab, surga, neraka</td></tr>
+                  <tr><td></td><td></td><td><strong>Iman kepada Qada-Qadar</strong></td><td>Ketetapan Allah</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="margin-top:12px; padding:10px 14px; background:var(--ruby-soft); border-radius:8px; border:1px solid #e0b0b8; font-size:13px; color:var(--ruby);">
+              ⚠️ <strong>Jebakan klasik:</strong> Zakat = Rukun ISLAM, bukan rukun iman. Soal sering menukar ini.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Akhlak -->
+      <div class="acc-item" id="acc-akidah-3">
+        <div class="acc-header" onclick="toggleAcc('acc-akidah-3')">
+          <div class="acc-title">
+            <span class="acc-badge emerald">Hafalan</span>
+            Akhlak Mahmudah vs Mazmumah
+          </div>
+          <span class="acc-arrow">⌄</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+              <div>
+                <div style="font-size:12px; font-weight:600; color:var(--emerald); text-transform:uppercase; letter-spacing:.04em; margin-bottom:8px;">Mahmudah (Terpuji)</div>
+                <div class="pill-list" style="flex-direction:column; gap:6px;">
+                  <span class="pill emerald">Jujur (Sidq)</span>
+                  <span class="pill emerald">Amanah</span>
+                  <span class="pill emerald">Sabar</span>
+                  <span class="pill emerald">Tawaduk</span>
+                  <span class="pill emerald">Adil</span>
+                  <span class="pill emerald">Syukur</span>
+                </div>
+              </div>
+              <div>
+                <div style="font-size:12px; font-weight:600; color:var(--ruby); text-transform:uppercase; letter-spacing:.04em; margin-bottom:8px;">Mazmumah (Tercela)</div>
+                <div class="pill-list" style="flex-direction:column; gap:6px;">
+                  <span class="pill ruby">Riya</span>
+                  <span class="pill ruby">Ujub</span>
+                  <span class="pill ruby">Takabur</span>
+                  <span class="pill ruby">Hasad</span>
+                  <span class="pill ruby">Dusta</span>
+                  <span class="pill ruby">Khianat</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FIQH ═══════════════════════════════════════════════════ -->
+<section class="section" id="fiqh">
+  <div class="wrapper">
+    <div class="section-header fade-up">
+      <div class="section-icon ruby">⚖️</div>
+      <div>
+        <h2 class="section-title">Fiqh Ibadah dan Muamalah</h2>
+        <p class="section-desc">Syarat vs rukun, ZISWAF, ibadah pokok, muamalah halal</p>
+      </div>
+    </div>
+
+    <div class="accordion fade-up">
+      <!-- Syarat vs Rukun -->
+      <div class="acc-item" id="acc-fiqh-1">
+        <div class="acc-header" onclick="toggleAcc('acc-fiqh-1')">
+          <div class="acc-title">
+            <span class="acc-badge ruby">Jebakan</span>
+            Syarat vs Rukun Shalat
+          </div>
+          <span class="acc-arrow">⌄</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr><th>Kategori</th><th>Definisi</th><th>Contoh</th><th>Mnemonik</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Syarat Sah</strong></td><td>Harus ada <em>sebelum/di luar</em> shalat</td><td>Suci dari hadas, menghadap kiblat, masuk waktu</td><td>Syarat = Sebelum</td></tr>
+                  <tr><td><strong>Rukun</strong></td><td>Bagian inti <em>di dalam</em> shalat</td><td>Niat, takbiratul ihram, membaca Al-Fatihah, ruku, sujud</td><td>Rukun = Ruang dalam</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ZISWAF -->
+      <div class="acc-item" id="acc-fiqh-2">
+        <div class="acc-header" onclick="toggleAcc('acc-fiqh-2')">
+          <div class="acc-title">
+            <span class="acc-badge ruby">Tabel</span>
+            ZISWAF — Zakat, Infak, Sedekah, Wakaf
+          </div>
+          <span class="acc-arrow">⌄</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="tbl-wrap">
+              <table>
+                <thead><tr><th>Istilah</th><th>Inti</th><th>Ciri Cepat</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Zakat</strong></td><td>Kewajiban tertentu</td><td>Ada muzaki dan mustahik; meliputi zakat mal dan zakat fitrah (UU 23/2011)</td></tr>
+                  <tr><td><strong>Infak</strong></td><td>Pengeluaran sukarela di luar zakat</td><td>Cakupan luas, untuk kemaslahatan umum</td></tr>
+                  <tr><td><strong>Sedekah</strong></td><td>Lebih luas dari infak</td><td>Bisa berupa harta atau nonharta</td></tr>
+                  <tr><td><strong>Wakaf</strong></td><td>Tahan pokok harta, alirkan manfaat</td><td>Ada wakif, nazhir (pengelola), dan peruntukan (PP 42/2006)</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ibadah puncak -->
+      <div class="acc-item" id="acc-fiqh-3">
+        <div class="acc-header" onclick="toggleAcc('acc-fiqh-3')">
+          <div class="acc-title">
+            <span class="acc-badge ruby">Hafalan</span>
+            Poin Puncak Ibadah
+          </div>
+          <span class="acc-arrow">⌄</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="poin-list">
+              <div class="poin-item"><div class="poin-dot"></div><div><strong>Wudhu (QS Al-Ma'idah 5:6):</strong> basuh wajah, tangan sampai siku, usap kepala, basuh kaki sampai mata kaki</div></div>
+              <div class="poin-item"><div class="poin-dot"></div><div><strong>Puasa Ramadan (QS Al-Baqarah 2:183):</strong> diwajibkan untuk membentuk takwa</div></div>
+              <div class="poin-item"><div class="poin-dot"></div><div><strong>Haji:</strong> puncaknya adalah <strong>wukuf di Arafah</strong> — kalau terlewat, haji tidak sah</div></div>
+              <div class="poin-item"><div class="poin-dot"></div><div><strong>Muamalah:</strong> pada dasarnya boleh, kecuali ada riba, gharar, maysir, penipuan, atau kezaliman</div></div>
+              <div class="poin-item"><div class="poin-dot"></div><div><strong>Mustahik zakat (QS At-Taubah 9:60):</strong> 8 golongan — fakir, miskin, amil, mualaf, hamba sahaya, gharim, fisabilillah, ibnu sabil</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SEJARAH & KEBUDAYAAN ISLAM ════════════════════════════ -->
+<section class="section" id="ski">
+  <div class="wrapper">
+    <div class="section-header fade-up">
+      <div class="section-icon sapphire">🕰️</div>
+      <div>
+        <h2 class="section-title">Sejarah dan Kebudayaan Islam</h2>
+        <p class="section-desc">Hijrah, Badar, Fathu Makkah, Khulafa al-Rasyidun, Wali Songo</p>
+      </div>
+    </div>
+
+    <div class="accordion fade-up" style="margin-bottom:28px;">
+      <div class="acc-item" id="acc-ski-1">
+        <div class="acc-header" onclick="toggleAcc('acc-ski-1')">
+          <div class="acc-title">
+            <span class="acc-badge sapphire">Timeline</span>
+            Garis Waktu Cepat
+          </div>
+          <span class="acc-arrow">⌄</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="timeline">
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year">610 M</div>
+                <div class="tl-event">Wahyu Pertama</div>
+                <div class="tl-note">QS Al-'Alaq, turun di Gua Hira</div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year">622 M</div>
+                <div class="tl-event">Hijrah ke Madinah</div>
+                <div class="tl-note">Awal kalender hijriah — ditetapkan pada masa Khalifah Umar</div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year">624 M</div>
+                <div class="tl-event">Perang Badar</div>
+                <div class="tl-note">Perang besar pertama yang sangat menentukan</div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year">630 M</div>
+                <div class="tl-event">Fathu Makkah</div>
+                <div class="tl-note">Kemenangan atas Quraisy, Ka'bah dibersihkan dari berhala</div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year">632 M</div>
+                <div class="tl-event">Wafatnya Nabi Muhammad SAW</div>
+                <div class="tl-note">Awal masa Khulafa al-Rasyidun</div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year">632–634 M</div>
+                <div class="tl-event">Abu Bakar al-Shiddiq</div>
+                <div class="tl-note">Khalifah pertama; inisiatif pengumpulan mushaf Al-Qur'an</div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year">634–644 M</div>
+                <div class="tl-event">Umar bin Khattab</div>
+                <div class="tl-note">Penguatan administrasi; penetapan awal kalender hijriah</div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year">644–656 M</div>
+                <div class="tl-event">Utsman bin Affan</div>
+                <div class="tl-note">Standarisasi mushaf Al-Qur'an — jangkar paling kuat untuk soal SKI</div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year">656–661 M</div>
+                <div class="tl-event">Ali bin Abi Thalib</div>
+                <div class="tl-note">Khalifah keempat (terakhir Khulafa al-Rasyidun)</div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year">Abad 14–16 M</div>
+                <div class="tl-event">Wali Songo</div>
+                <div class="tl-note">Tokoh dakwah Islam kultural di Jawa — wayang, gamelan, pesantren</div>
+              </div>
+            </div>
+            <div style="margin-top:16px; padding:10px 14px; background:var(--sapphire-soft); border-radius:8px; font-size:13px; color:var(--sapphire);">
+              <strong>Mnemonik ABUA:</strong> Abu Bakar → Umar → Utsman → Ali
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item" id="acc-ski-2">
+        <div class="acc-header" onclick="toggleAcc('acc-ski-2')">
+          <div class="acc-title">
+            <span class="acc-badge sapphire">Hafalan</span>
+            Ulul Azmi — Lima Rasul Istimewa
+          </div>
+          <span class="acc-arrow">⌄</span>
+        </div>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="pill-list">
+              <span class="pill sapphire">Nabi Nuh AS</span>
+              <span class="pill sapphire">Nabi Ibrahim AS</span>
+              <span class="pill sapphire">Nabi Musa AS</span>
+              <span class="pill sapphire">Nabi Isa AS</span>
+              <span class="pill sapphire">Nabi Muhammad SAW</span>
+            </div>
+            <p style="margin-top:12px; font-size:13px; color:var(--ink-muted);">Ulul Azmi = para rasul yang diberi keteguhan dan kesabaran luar biasa dalam berdakwah.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LATIHAN SOAL ════════════════════════════════════════════ -->
+<section class="section" id="quiz">
+  <div class="wrapper">
+    <div class="section-header fade-up">
+      <div class="section-icon gold">✏️</div>
+      <div>
+        <h2 class="section-title">Latihan Soal</h2>
+        <p class="section-desc">Klik jawaban untuk cek langsung. Pahami kenapa opsi lain salah.</p>
+      </div>
+    </div>
+
+    <div class="score-bar fade-up">
+      <div class="score-label">Skor</div>
+      <div class="score-count" id="score-display">0 / 20</div>
+      <div class="score-progress"><div class="score-fill" id="score-fill" style="width:0%"></div></div>
+      <button onclick="resetQuiz()" style="padding:7px 14px; border-radius:8px; background:var(--surface-2); border:1px solid var(--border); font-size:13px; font-weight:600; cursor:pointer; color:var(--ink-soft); flex-shrink:0;">Reset</button>
+    </div>
+
+    <div class="quiz-wrap fade-up" id="quiz-container"></div>
+  </div>
+</section>
+
+<!-- ═══ JEBAKAN SOAL ════════════════════════════════════════════ -->
+<section class="section" id="jebakan">
+  <div class="wrapper">
+    <div class="section-header fade-up">
+      <div class="section-icon ruby">⚠️</div>
+      <div>
+        <h2 class="section-title">Jebakan yang Paling Sering Muncul</h2>
+        <p class="section-desc">Pelajari ini — kebanyakan kekeliruan ada di sini, bukan di soal yang susah.</p>
+      </div>
+    </div>
+    <div class="trap-grid fade-up">
+      <div class="trap-card">
+        <div class="trap-title">Sanad vs Matan</div>
+        <div class="trap-wrong">"Rantai periwayatan = matan"</div>
+        <div class="trap-right">✓ Sanad = rantai; Matan = isi teks</div>
+      </div>
+      <div class="trap-card">
+        <div class="trap-title">Sahih vs Mutawatir</div>
+        <div class="trap-wrong">"Sahih = banyak jalur"</div>
+        <div class="trap-right">✓ Sahih = kualitas; Mutawatir = kuantitas jalur</div>
+      </div>
+      <div class="trap-card">
+        <div class="trap-title">Rububiyah vs Uluhiyah</div>
+        <div class="trap-wrong">"Uluhiyah = penciptaan alam"</div>
+        <div class="trap-right">✓ Rububiyah = mengatur; Uluhiyah = disembah</div>
+      </div>
+      <div class="trap-card">
+        <div class="trap-title">Zakat masuk Rukun Iman?</div>
+        <div class="trap-wrong">"Zakat = rukun iman"</div>
+        <div class="trap-right">✓ Zakat = rukun ISLAM; Iman tidak ada zakat</div>
+      </div>
+      <div class="trap-card">
+        <div class="trap-title">Syarat vs Rukun Shalat</div>
+        <div class="trap-wrong">"Menghadap kiblat = rukun shalat"</div>
+        <div class="trap-right">✓ Menghadap kiblat = SYARAT SAH shalat</div>
+      </div>
+      <div class="trap-card">
+        <div class="trap-title">Zakat vs Wakaf</div>
+        <div class="trap-wrong">"Wakaf = pokok harta dihabiskan"</div>
+        <div class="trap-right">✓ Wakaf = pokok DITAHAN, manfaat dialirkan</div>
+      </div>
+      <div class="trap-card">
+        <div class="trap-title">Hijrah vs Fathu Makkah</div>
+        <div class="trap-wrong">"Fathu Makkah = awal kalender hijriah"</div>
+        <div class="trap-right">✓ Hijrah 622 M = kalender; Fathu Makkah = 630 M</div>
+      </div>
+      <div class="trap-card">
+        <div class="trap-title">Abu Bakar vs Utsman</div>
+        <div class="trap-wrong">"Abu Bakar = standarisasi mushaf"</div>
+        <div class="trap-right">✓ Abu Bakar = kompilasi awal; Utsman = standarisasi</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ JADWAL BELAJAR ══════════════════════════════════════════ -->
+<section class="section" id="jadwal">
+  <div class="wrapper">
+    <div class="section-header fade-up">
+      <div class="section-icon gold">⏱️</div>
+      <div>
+        <h2 class="section-title">Jadwal Belajar 2 Jam</h2>
+        <p class="section-desc">Urutan ini dirancang supaya otak bergerak dari istilah dasar ke materi rawan tertukar.</p>
+      </div>
+    </div>
+    <div class="jadwal-list fade-up">
+      <div class="jadwal-item">
+        <div class="jadwal-time">10 mnt</div>
+        <div>
+          <div class="jadwal-focus">Diagnostik Cepat</div>
+          <div class="jadwal-target">Jawab tanpa catatan: sanad, uluhiyah, syarat shalat, hijrah, Utsman — identifikasi 3 titik lemahmu</div>
+        </div>
+      </div>
+      <div class="jadwal-item">
+        <div class="jadwal-time">25 mnt</div>
+        <div>
+          <div class="jadwal-focus">Al-Qur'an dan Hadits</div>
+          <div class="jadwal-target">Hafal sanad/matan, Makki/Madani, 4 surah kunci, Kutub al-Sittah</div>
+        </div>
+      </div>
+      <div class="jadwal-item">
+        <div class="jadwal-time">20 mnt</div>
+        <div>
+          <div class="jadwal-focus">Akidah dan Akhlak</div>
+          <div class="jadwal-target">Hafal rububiyah–uluhiyah, rukun iman 6, definisi ihsan, perbedaan akhlak mahmudah–mazmumah</div>
+        </div>
+      </div>
+      <div class="jadwal-item">
+        <div class="jadwal-time">30 mnt</div>
+        <div>
+          <div class="jadwal-focus">Fiqh Ibadah dan Muamalah</div>
+          <div class="jadwal-target">Hafal syarat vs rukun shalat, ZISWAF pembeda, wukuf di Arafah, mustahik zakat</div>
+        </div>
+      </div>
+      <div class="jadwal-item">
+        <div class="jadwal-time">20 mnt</div>
+        <div>
+          <div class="jadwal-focus">Sejarah dan Kebudayaan Islam</div>
+          <div class="jadwal-target">Hafal Hijrah–Badar–Fathu Makkah, urutan ABUA, Utsman = mushaf, Wali Songo = Jawa</div>
+        </div>
+      </div>
+      <div class="jadwal-item">
+        <div class="jadwal-time">10 mnt</div>
+        <div>
+          <div class="jadwal-focus">Mixed Recall</div>
+          <div class="jadwal-target">Jawab 10 fakta top dari memori tanpa lihat catatan</div>
+        </div>
+      </div>
+      <div class="jadwal-item">
+        <div class="jadwal-time">5 mnt</div>
+        <div>
+          <div class="jadwal-focus">Review Cheat Sheet</div>
+          <div class="jadwal-target">Baca ulang 20 fakta kunci. Tidur cukup. Bismillah.</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:16px; padding:14px 16px; background:var(--gold-pale); border:1px solid var(--border-gold); border-radius:10px; font-size:13px; color:var(--ink-soft);">
+      💡 <strong>Kalau cuma punya 1 jam:</strong> fokus hanya pada sanad–matan, Al-Ikhlas, Hadits Jibril, rububiyah–uluhiyah, rukun iman, syarat vs rukun shalat, zakat vs wakaf, hijrah, ABUA, Wali Songo.
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ══════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-icon">ق</div>
+          <div class="footer-logo-text">Materi Keislaman<br /><span style="font-size:11px; font-weight:400; color:rgba(255,255,255,.4);">UM-PTKIN 2026</span></div>
+        </div>
+        <p class="footer-desc">Paket hafalan darurat untuk Literasi Ajaran Islam UM-PTKIN 2026. Ringkas, tegas, dan siap untuk ujian.</p>
+      </div>
+
+      <div class="footer-creator">
+        <div class="footer-creator-title">Dibuat oleh</div>
+        <div class="creator-card">
+          <div class="creator-avatar">V</div>
+          <div>
+            <div class="creator-name">Vicky</div>
+            <div class="creator-handle">@mvckyprytna_</div>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.instagram.com/mvckyprytna_" target="_blank" rel="noopener" class="footer-link">
+            <span class="footer-link-icon">📸</span>
+            Instagram · @mvckyprytna_
+          </a>
+          <a href="https://vickydisini.my.id" target="_blank" rel="noopener" class="footer-link">
+            <span class="footer-link-icon">🪪</span>
+            Digital Card · vickydisini.my.id
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 · Semua materi disusun untuk keperluan belajar.</div>
+      <div class="footer-tag">UM-PTKIN · SSE · Literasi Ajaran Islam</div>
+    </div>
+  </div>
+</footer>
+
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Kembali ke atas">↑</button>
+
+<script>
+/* ─── QUIZ DATA ─────────────────────────────────────────────── */
+const quizData = [
+  {
+    q: "Bagian hadits yang berupa rantai perawi disebut …",
+    opts: ["Matan", "Sanad", "Ijma'", "Qiyas"],
+    ans: 1,
+    exp: "<strong>Sanad</strong> = jalur periwayatan (siapa meriwayatkan dari siapa). <strong>Matan</strong> = isi teks hadits. Ijma' dan qiyas adalah sumber hukum fiqh, bukan bagian hadits."
+  },
+  {
+    q: "Surah yang paling tegas menegaskan bahwa Allah Esa, tidak beranak dan tidak diperanakkan adalah …",
+    opts: ["Al-Ma'un", "Al-'Asr", "Al-Ikhlas", "Al-Fil"],
+    ans: 2,
+    exp: "<strong>Al-Ikhlas (QS 112)</strong> adalah penanda tauhid paling singkat: Allah Ahad, tidak beranak, tidak diperanakkan, tidak ada yang setara."
+  },
+  {
+    q: "Istilah hadits yang menunjukkan banyaknya jalur periwayatan sampai sangat sulit terjadi kesepakatan dusta adalah …",
+    opts: ["Hasan", "Mutawatir", "Sahih", "Daif"],
+    ans: 1,
+    exp: "<strong>Mutawatir</strong> berfokus pada banyak-jalur (kuantitas). <strong>Sahih</strong> berfokus pada kualitas keotentikan sanad dan perawi. Keduanya berbeda konsep."
+  },
+  {
+    q: "Tema utama Al-Hujurat ayat 10–13 paling dekat dengan …",
+    opts: ["Hukum waris", "Ukhuwah dan adab sosial", "Hukum puasa", "Kisah perang"],
+    ans: 1,
+    exp: "QS Al-Hujurat 49:10–13 sangat identik dengan <strong>persaudaraan, larangan merendahkan orang lain</strong>, dan ukuran kemuliaan berupa takwa."
+  },
+  {
+    q: "Hadits Jibril paling terkenal karena merangkum …",
+    opts: ["Fiqh muamalah, nikah, dan waris", "Islam, Iman, Ihsan, dan tanda kiamat", "Sejarah Khulafa al-Rasyidun", "Hukum jual beli kontan"],
+    ans: 1,
+    exp: "Hadits Jibril adalah ringkasan inti agama: <strong>Islam</strong> (amal lahir), <strong>Iman</strong> (keyakinan batin), <strong>Ihsan</strong> (kualitas spiritual), dan tanda kiamat."
+  },
+  {
+    q: "Meyakini bahwa hanya Allah yang berhak disembah termasuk tauhid …",
+    opts: ["Rububiyah", "Uluhiyah", "Mulkiyah", "Jabariyah"],
+    ans: 1,
+    exp: "<strong>Uluhiyah</strong> = mengesakan Allah dalam ibadah. Rububiyah = mengesakan Allah dalam penciptaan dan pengaturan alam."
+  },
+  {
+    q: "Yang BUKAN termasuk rukun iman adalah …",
+    opts: ["Iman kepada rasul", "Iman kepada hari akhir", "Iman kepada zakat", "Iman kepada malaikat"],
+    ans: 2,
+    exp: "<strong>Zakat</strong> termasuk rukun <strong>Islam</strong>, bukan rukun iman. Rukun iman ada 6: Allah, malaikat, kitab, rasul, hari akhir, qada-qadar."
+  },
+  {
+    q: "Definisi ihsan yang paling tepat adalah …",
+    opts: ["Menghafal semua hukum fiqh", "Beribadah seakan-akan melihat Allah; sadar Allah melihat kita", "Rajin bekerja agar kaya", "Mencintai semua orang tanpa batas syariat"],
+    ans: 1,
+    exp: "Ini definisi klasik langsung dari <strong>Hadits Jibril</strong>. Ihsan adalah dimensi kualitas spiritual dalam beribadah."
+  },
+  {
+    q: "Menghadap kiblat sebelum melaksanakan shalat termasuk …",
+    opts: ["Rukun shalat", "Sunnah shalat", "Syarat sah shalat", "Pembatal shalat"],
+    ans: 2,
+    exp: "<strong>Syarat sah</strong> = harus dipenuhi sebelum/di luar shalat (suci, kiblat, waktu). <strong>Rukun</strong> = bagian inti di dalam pelaksanaan shalat."
+  },
+  {
+    q: "Menurut dasar hukum pengelolaan zakat di Indonesia (UU 23/2011), zakat meliputi …",
+    opts: ["Zakat profesi saja", "Zakat mal saja", "Zakat fitrah saja", "Zakat mal dan zakat fitrah"],
+    ans: 3,
+    exp: "UU No. 23/2011 menegaskan zakat meliputi <strong>zakat mal dan zakat fitrah</strong>. Zakat mal mencakup emas, perak, uang, perdagangan, pertanian, dan lain-lain."
+  },
+  {
+    q: "Tambahan batil atas pinjaman atau transaksi yang menyalahi syariah disebut …",
+    opts: ["Ijarah", "Riba", "Qiyas", "Hibah"],
+    ans: 1,
+    exp: "<strong>Riba</strong> adalah kata kunci utama dalam soal muamalah dasar. Ijarah = sewa; Qiyas = analogi hukum; Hibah = pemberian sukarela."
+  },
+  {
+    q: "Bagian paling esensial dari ibadah haji yang bila terlewat membuat hajinya tidak sah adalah …",
+    opts: ["Tahallul", "Wukuf di Arafah", "Mabit di Muzdalifah", "Lempar jumrah"],
+    ans: 1,
+    exp: "<strong>Wukuf di Arafah</strong> adalah rukun haji yang paling utama. Nabi bersabda: 'Haji itu adalah Arafah.'"
+  },
+  {
+    q: "Wakaf berbeda dari sedekah biasa karena …",
+    opts: ["Selalu wajib", "Hanya berupa uang tunai", "Pokok harta ditahan, manfaatnya dialirkan", "Hanya boleh dilakukan pemerintah"],
+    ans: 2,
+    exp: "Ini inti definisi wakaf dalam fiqh dan regulasi Indonesia (PP 42/2006): <strong>pokok harta ditahan (tidak habis), manfaatnya dialirkan</strong> untuk kemaslahatan."
+  },
+  {
+    q: "Peristiwa yang dijadikan awal kalender hijriah adalah …",
+    opts: ["Lahir Nabi", "Hijrah ke Madinah", "Perang Uhud", "Fathu Makkah"],
+    ans: 1,
+    exp: "<strong>Hijrah ke Madinah (622 M)</strong> dijadikan titik awal kalender hijriah pada masa Khalifah Umar bin Khattab. Bukan kelahiran Nabi."
+  },
+  {
+    q: "Urutan Khulafa al-Rasyidun yang benar adalah …",
+    opts: ["Abu Bakar – Utsman – Umar – Ali", "Umar – Abu Bakar – Ali – Utsman", "Abu Bakar – Umar – Utsman – Ali", "Ali – Utsman – Umar – Abu Bakar"],
+    ans: 2,
+    exp: "<strong>ABUA:</strong> Abu Bakar → Umar → Utsman → Ali. Ini urutan dasar wajib hafal."
+  },
+  {
+    q: "Khalifah yang paling lekat dengan standarisasi mushaf Al-Qur'an adalah …",
+    opts: ["Abu Bakar", "Umar", "Utsman", "Ali"],
+    ans: 2,
+    exp: "<strong>Khalifah Utsman</strong> menstandarisasi mushaf Al-Qur'an dan menyebarkannya ke berbagai wilayah. Abu Bakar melakukan pengumpulan awal."
+  },
+  {
+    q: "Perang besar pertama yang sangat menentukan posisi umat Islam awal adalah …",
+    opts: ["Badar", "Khandaq", "Hunain", "Tabuk"],
+    ans: 0,
+    exp: "<strong>Perang Badar (624 M)</strong> adalah perang besar pertama setelah hijrah, sangat menentukan bagi komunitas Muslim awal. QS Al-Anfal banyak membahas konteks ini."
+  },
+  {
+    q: "Wali Songo paling dikenal dalam sejarah Indonesia sebagai …",
+    opts: ["Penyusun hadits Kutub al-Sittah", "Tokoh dakwah Islam di Jawa", "Para Khalifah Abbasiyah", "Imam mazhab fikih empat"],
+    ans: 1,
+    exp: "Wali Songo adalah tokoh penyebaran Islam di Jawa melalui pendekatan kultural — wayang, gamelan, dan pesantren. Tidak ada kaitannya dengan Kutub al-Sittah."
+  },
+  {
+    q: "Ciri utama surah-surah Makiyah adalah …",
+    opts: ["Banyak membahas hukum pernikahan dan waris", "Berfokus pada tauhid, akhirat, dan fondasi iman", "Membahas pembentukan masyarakat dan muamalah", "Berisi kisah perang dan jihad fisik"],
+    ans: 1,
+    exp: "<strong>Makki = Mendasar.</strong> Surah Makiyah menekankan tauhid, akhirat, dan fondasi iman. Madani = Masyarakat: lebih ke hukum, muamalah, dan komunitas."
+  },
+  {
+    q: "Dalam Al-'Asr, empat unsur keselamatan yang disebutkan adalah …",
+    opts: ["Shalat, zakat, puasa, haji", "Iman, amal saleh, saling menasihati kebenaran, saling menasihati kesabaran", "Tauhid, syahadat, hijrah, jihad", "Sabar, syukur, tawakal, tawaduk"],
+    ans: 1,
+    exp: "QS Al-'Asr (103) menyebut empat unsur keselamatan: <strong>iman, amal saleh, saling menasihati dalam kebenaran (al-haqq), dan saling menasihati dalam kesabaran (al-sabr)</strong>."
+  }
+];
+
+let score = 0;
+let answered = new Array(quizData.length).fill(false);
+
+function renderQuiz() {
+  const container = document.getElementById('quiz-container');
+  container.innerHTML = '';
+  quizData.forEach((q, qi) => {
+    const div = document.createElement('div');
+    div.className = 'quiz-card';
+    div.id = `qcard-${qi}`;
+    const labels = ['A','B','C','D'];
+    const optsHtml = q.opts.map((o, oi) =>
+      `<div class="quiz-opt" id="qopt-${qi}-${oi}" onclick="selectOpt(${qi},${oi})">
+        <div class="quiz-label">${labels[oi]}</div>
+        <div>${o}</div>
+      </div>`
+    ).join('');
+    div.innerHTML = `
+      <div class="quiz-q" data-n="${qi+1}">${q.q}</div>
+      <div class="quiz-options">${optsHtml}</div>
+      <div class="quiz-explanation" id="qexp-${qi}">
+        <strong>Penjelasan:</strong> ${q.exp}
+      </div>`;
+    container.appendChild(div);
+  });
+  updateScore();
+}
+
+function selectOpt(qi, oi) {
+  if (answered[qi]) return;
+  answered[qi] = true;
+  const correct = quizData[qi].ans;
+  const opts = document.querySelectorAll(`#qcard-${qi} .quiz-opt`);
+  opts.forEach((el, idx) => {
+    el.classList.add('disabled');
+    if (idx === correct) el.classList.add('correct');
+    else if (idx === oi && oi !== correct) el.classList.add('wrong');
+  });
+  if (oi === correct) score++;
+  document.getElementById(`qexp-${qi}`).classList.add('show');
+  updateScore();
+}
+
+function updateScore() {
+  const total = quizData.length;
+  document.getElementById('score-display').textContent = `${score} / ${total}`;
+  document.getElementById('score-fill').style.width = `${(score/total)*100}%`;
+}
+
+function resetQuiz() {
+  score = 0;
+  answered.fill(false);
+  renderQuiz();
+}
+
+/* ─── ACCORDION ─────────────────────────────────────────────── */
+function toggleAcc(id) {
+  const item = document.getElementById(id);
+  const body = item.querySelector('.acc-body');
+  const isOpen = item.classList.contains('open');
+  item.classList.toggle('open', !isOpen);
+  body.style.maxHeight = isOpen ? '0' : body.scrollHeight + 'px';
+}
+
+/* ─── SCROLL TO ──────────────────────────────────────────────── */
+function scrollTo(selector) {
+  const el = document.querySelector(selector);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/* ─── PROGRESS BAR ───────────────────────────────────────────── */
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const total = document.documentElement.scrollHeight - window.innerHeight;
+  document.getElementById('progress-bar').style.width = (scrolled/total*100) + '%';
+  const btn = document.getElementById('back-top');
+  btn.classList.toggle('show', scrolled > 400);
+});
+
+/* ─── ACTIVE NAV TAB ─────────────────────────────────────────── */
+const sections = ['hero','cheatsheet','quran','akidah','fiqh','ski','quiz','jadwal'];
+const tabs = document.querySelectorAll('.nav-tab');
+const tabMap = { hero:0, cheatsheet:0, quran:1, akidah:2, fiqh:3, ski:4, quiz:5, jadwal:6 };
+window.addEventListener('scroll', () => {
+  let current = 'hero';
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top <= 80) current = id;
+  });
+  tabs.forEach((t,i) => t.classList.toggle('active', i === tabMap[current]));
+});
+
+/* ─── FADE IN OBSERVER ───────────────────────────────────────── */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+/* ─── INIT ───────────────────────────────────────────────────── */
+renderQuiz();
+</script>
+</body>
+</html>
